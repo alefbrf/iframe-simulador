@@ -1,251 +1,136 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simuladores</title>
-</head>
-<body>
-    <link
-  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"
-  rel="stylesheet"
-/>
-<div class="pagina">
-<div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
-      data-mdb-toggle="dropdown" aria-expanded="false">
-      Modelos
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <li><a href="" class="dropdown-item">Social</a>
-    <ul class="dropdown-menu dropdown-submenu">
-        <li><a href="" class="dropdown-item">Bristol, MicroVichy,<br>Medium, London,<br>Spagueti, Fusili,<br>Londonconfort, Barcelona,<br> Saville</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/socialcurto--Bristol-MicroVichy-Medium-london-Spagueti-fusili-londonconfort-barcelona-saville/" class="dropdown-item links">Curto</a></li>
-            <li><a href="https://alefnix.github.io/sociallongo--Bristol-MicroVichy-Medium-london-Spagueti-fusili-londonconfort-barcelona-saville/" class="dropdown-item links">Longo</a></li>
-        </ul></li>
-        <li><a href="" class="dropdown-item">Confort Plus</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/social-curto-confort-plus/" class="dropdown-item links">Curto</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-confort-plus/" class="dropdown-item links">Longo</a></li>
-        </ul></li>
-        <li><a href="" class="dropdown-item">Cottom Premium</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/social-curto-cottom-premium/" class="dropdown-item links">Curto</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-cottom-premium/" class="dropdown-item links">Longo</a></li>
-        </ul></li>
-        <li><a href="" class="dropdown-item">Classic</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/Social-curto-classic/" class="dropdown-item links">Curto</a></li>
-            <li><a href="https://alefnix.github.io/Social-longo-classic/" class="dropdown-item links">Longo</a></li>
-        </ul></li>
-        <li><a href="" class="dropdown-item">Dopfil</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/social-curto-dopfil/" class="dropdown-item links">Curto</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-dopfil/" class="dropdown-item links">Longo</a></li>
-        </ul></li>
-        <li><a href="" class="dropdown-item">Fustão</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/social-curto-fustao/" class="dropdown-item links">Curto</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-fustao/" class="dropdown-item links">Longo</a></li>
-        </ul></li>
-        <li><a href="" class="dropdown-item">Natural Fit</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/social-curto-natural-fit/" class="dropdown-item links">Curto</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-natural-fit/" class="dropdown-item links">Longo</a></li>
-        </ul></li>
-        <li><a href="" class="dropdown-item">Natural Fit Mescla</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/social-curto-natural-fit-mescla/" class="dropdown-item links">Curto</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-natural-fit-mescla/" class="dropdown-item links">Longo</a></li>
-        </ul></li>
-        <li><a href="" class="dropdown-item">Panamá</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/social-curto-panama/" class="dropdown-item links">Curto</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-panama/" class="dropdown-item links">Longo</a></li>
-        </ul></li>
-        <li><a href="" class="dropdown-item">Tricoline Amelie</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/social-curto-tricoline-amelie/" class="dropdown-item links">Curto</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-tricoline-amelie/" class="dropdown-item links">Longo</a></li>
-        </ul></li>
-        <li><a href="" class="dropdown-item">Tricoline Cannes</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/social-curto-tricoline-cannes/" class="dropdown-item links">Curto</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-tricoline-cannes/" class="dropdown-item links">Longo</a></li>
-        </ul></li>
-        <li><a href="" class="dropdown-item">Tricoline Ibiza</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/social-curto-tricoline-cannes/" class="dropdown-item links">Curto</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-tricoline-cannes/" class="dropdown-item links">Longo</a></li>
-        </ul></li>
-        <li><a href="" class="dropdown-item">Tricoline Soft Mescla</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/social-curto-tricoline-soft-mescla/" class="dropdown-item links">Curto</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-tricoline-soft-mescla/" class="dropdown-item links">Longo</a></li>
-        </ul></li>
-        <li><a href="" class="dropdown-item">Profit Mix</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/social-curto-profit-mix/" class="dropdown-item links">Curto</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-profit-mix/" class="dropdown-item links">Longo</a></li>
-        </ul></li>
-        <li><a href="" class="dropdown-item">Profit Strong</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/social-curto-profit-strong/" class="dropdown-item links">Curto</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-profit-strong/" class="dropdown-item links">Longo</a></li>
-        </ul></li>
-        <li><a href="" class="dropdown-item">Profit</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/simulador-profit-curto/" class="dropdown-item links">Curto</a></li>
-            <li><a href="https://alefnix.github.io/Simulador-Profit/" class="dropdown-item links">Longo</a></li>
-        </ul></li>
-    </ul>    
-    </li>
-      <li><a class="dropdown-item" href="#">Jalecos &raquo;</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/jaleco-Unisafe-slim-FR/" class="dropdown-item links">Unisafe Slim FR</a></li>
-            <li><a href="https://alefnix.github.io/jaleco-Pollycotton-mais-Pollycottoncedro-super/" class="dropdown-item links">Pollycotton mais e Pollycottoncedro super</a></li>
-            <li><a href="https://alefnix.github.io/jaleco-Pollycotton-leve/" class="dropdown-item links">Pollycotton leve</a></li>
-            <li><a href="https://alefnix.github.io/jaleco-Mercurio-FR/" class="dropdown-item links">Mercúrio FR</a></li>
-            <li><a href="https://alefnix.github.io/jaleco-Jupiter-FR/" class="dropdown-item links">Júpiter FR</a></li>
-            <li><a href="https://alefnix.github.io/jaleco-Flex-rip-stop/" class="dropdown-item links">Flex Rip Stop</a></li>
-            <li><a href="https://alefnix.github.io/jaleco-Cedrotech-FR/" class="dropdown-item links">Cedrotech FR</a></li>
-            <li><a href="https://alefnix.github.io/jaleco-cedro-rip-stop-super/" class="dropdown-item links">Cedro Rip Stop Super</a></li>
-            <li><a href="https://alefnix.github.io/jaleco-Cedro-rip-stop/" class="dropdown-item links">Cedro rip Stop</a></li>
-            <li><a href="https://alefnix.github.io/jaleco-cedropac--pacleve/" class="dropdown-item links">Cedropac e CedroPac Leve</a></li>
-            <li><a href="https://alefnix.github.io/jaleco-cedrocomfort-ripstop/" class="dropdown-item links">Cedrocomfort RipStop</a></li>
-            <li><a href="https://alefnix.github.io/jaleco-Cedrobrim--super-Cedroleve-super/" class="dropdown-item links">Cedrobrom Super e Cedroleve Super</a></li>
-            <li><a href="https://alefnix.github.io/jaleco-Cedrobrim-drill-Cedroleve-drill/" class="dropdown-item links">Cedrobrim Drill e Cedrolve Drill</a></li>
-            <li><a href="https://alefnix.github.io/jaleco-Venus-FR/" class="dropdown-item links">Vênus FR</a></li>
-            <li><a href="https://alefnix.github.io/jaleco-Unipar-FR/" class="dropdown-item links">Unipar FR</a></li>
-            <li><a href="https://alefnix.github.io/jaleco-Polycedrobrim-super/" class="dropdown-item links">Pollycedrobrim Super</a></li>
-        </ul> 
-      </li>
-      <li><a class="dropdown-item" href="#">Polo &raquo;</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/polo-pv/" class="dropdown-item links">PV</a></li>
-            <li><a href="https://alefnix.github.io/polo-piquet/" class="dropdown-item links">Piquet</a></li>
-            <li><a href="https://alefnix.github.io/polo-100-algod-o/" class="dropdown-item links">100% Algodão</a></li> 
-        </ul> 
-    </li>
-    <li><a class="dropdown-item" href="#">Colete &raquo;</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/colete-polycotton-mais-polycottoncedro-super/" class="dropdown-item links">Pollycotton Mais e Pollycottoncedro Super</a></li>
-            <li><a href="https://alefnix.github.io/colete-polycotton-mais-polycottoncedro-super/" class="dropdown-item links">Cedrobrim Super e Cedroleve Super</a></li>
-            <li><a href=" https://alefnix.github.io/colete-cedrobrim-leve-drill/" class="dropdown-item links">Cedrobrim Drill e Cedroleve Drill</a></li>
-            <li><a href="https://alefnix.github.io/colete-cedropac-cedropac-leve/" class="dropdown-item links">Cedropac e Cedropac Leve</a></li>
-            <li><a href="https://alefnix.github.io/colete-flex-rip-stop/" class="dropdown-item links">Flex Rip Stop</a></li>
-            <li><a href="https://alefnix.github.io/colete-cedrocomfort-ripstop/" class="dropdown-item links">Cedrocomfort RipStop</a></li>
-            <li><a href="https://alefnix.github.io/colete-cedro-ripstop/" class="dropdown-item links">Cedro Ripstop</a></li>
-            <li><a href="https://alefnix.github.io/colete-polycedrobrim-super/" class="dropdown-item links">Pollycedrobrim Super</a></li>
-            <li><a href="https://alefnix.github.io/colete-polycotton-leve/" class="dropdown-item links">Pollycotton Leve</a></li>
-            <li><a href="https://alefnix.github.io/colete-cedro-rip-stop-super/" class="dropdown-item links">Cedro Rip Stop Super</a></li>
-        </ul> 
-    </li>
-    <li><a class="dropdown-item" href="#">Calça &raquo;</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/calca-cedropac/" class="dropdown-item links">Cedropac</a></li>
-            <li><a href="https://alefnix.github.io/calca-polycottoncedro-super/" class="dropdown-item links">Pollycottoncedro Super</a></li>
-            <li><a href="https://alefnix.github.io/calca-cedrotech-fr/" class="dropdown-item links">Cedrotech FR</a></li>
-            <li><a href="https://alefnix.github.io/calca-cedro-rip-stop/" class="dropdown-item links">Júpiter FR</a></li>
-            <li><a href="https://alefnix.github.io/calca-cedro-rip-stop/" class="dropdown-item links">Cedro Ripstop</a></li>
-            <li><a href="https://alefnix.github.io/calca-cedrocomfort-ripstop/" class="dropdown-item links">Cedrocomfort Ripstop</a></li>
-            <li><a href="https://alefnix.github.io/calca-Polycotton-mais/" class="dropdown-item links">Pollycotton Mais</a></li>
-            <li><a href="https://alefnix.github.io/calca-unisafe-slim/" class="dropdown-item links">Unisafe Slim</a></li>
-            <li><a href="https://alefnix.github.io/calca-policedrobrim-super/" class="dropdown-item links">Policedrobrim Super</a></li>
-            <li><a href="https://alefnix.github.io/calca-cedrobrim-super/" class="dropdown-item links">Cedrobrim Super</a></li>
-            <li><a href="https://alefnix.github.io/calca-cedrobrim-drill/" class="dropdown-item links">Cedrobrim Drill</a></li>
-            <li><a href="https://alefnix.github.io/calca-flex-rip-stop/" class="dropdown-item links">Flex RipStop</a></li>
-            <li><a href="https://alefnix.github.io/calca-mercurio-fr/" class="dropdown-item links">Mercúrio FR</a></li>
-            <li><a href="https://alefnix.github.io/calca-unipar-FR/" class="dropdown-item links">Uniper FR</a></li>
-            <li><a href="https://alefnix.github.io/calca-cedro-rip-stop-super/" class="dropdown-item links">Cedro RipStop Super</a></li>
-        </ul> 
-    </li>
-    <li><a href="https://alefnix.github.io/simulador-bon-/" class="dropdown-item links">Boné</a></li>
-    <li><a class="dropdown-item" href="#">Guarda Pó &raquo;</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/guarda-p-cedrohospitalar-cedrofill-cedrovip/" class="dropdown-item links">Cedrohospitalar, cedrofill e cedrovip</a></li>
-            <li><a href="https://alefnix.github.io/guardapo-cedropac-leve/" class="dropdown-item links">Cedropac leve</a></li>
-            <li><a href="https://alefnix.github.io/guardapo-oxford/" class="dropdown-item links">Oxford</a></li>
-            <li><a href="https://alefnix.github.io/guardapo-gabardine/" class="dropdown-item links">Gabardine</a></li>
-        </ul> 
-    </li>
-    <li><a href="https://alefnix.github.io/moletomoficial/" class="dropdown-item links">Moletom</a></li>
-    <li><a class="dropdown-item" href="#">Jaqueta 01 &raquo;</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/jaqueta-01-nylon-240/" class="dropdown-item links">Nylon</a></li>
-            <li><a href="https://alefnix.github.io/jaqueta-01-cedropac/" class="dropdown-item links">Cedropac</a></li>
-            <li><a href="https://alefnix.github.io/jaqueta-01-tactel/" class="dropdown-item links">Tactel</a></li>
-        </ul> 
-    </li>
-    <li><a class="dropdown-item" href="#">Jaqueta 02 &raquo;</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/jaqueta-02-nylon/" class="dropdown-item links">Nylon</a></li>
-            <li><a href="https://alefnix.github.io/jaqueta-02-cedropac/" class="dropdown-item links">Cedropac</a></li>
-            <li><a href="https://alefnix.github.io/jaqueta-02-tactel/" class="dropdown-item links">Tactel</a></li>
-        </ul> 
-    </li>
-    <li><a class="dropdown-item" href="#">Jaqueta 03 &raquo;</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/jaqueta3-nylon/" class="dropdown-item links">Nylon</a></li>
-            <li><a href="https://alefnix.github.io/Jaqueta3-cedropac/" class="dropdown-item links">Cedropac</a></li>
-            <li><a href="https://alefnix.github.io/jaqueta3-tactel/" class="dropdown-item links">Tactel</a></li>
-        </ul> 
-    </li>
-    <li><a class="dropdown-item" href="#">Macacão NR10 &raquo;</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="https://alefnix.github.io/macacao-cedro-rip-stop-super/" class="dropdown-item links">Cedro Ripstop Super</a></li>
-            <li><a href="https://alefnix.github.io/macacao-cedro-ripstop/" class="dropdown-item links">Cedro Ripstop</a></li>
-            <li><a href="https://alefnix.github.io/macacao-cedrobrim-drill/" class="dropdown-item links">Cedrobrim Drill</a></li>
-            <li><a href="https://alefnix.github.io/macacao-cedrobrim-super/" class="dropdown-item links">Cedrobrim Super</a></li>
-            <li><a href="https://alefnix.github.io/macacao-cedrocomfort-ripstop/" class="dropdown-item links">Cedrocomfort Ripstop</a></li>
-            <li><a href="https://alefnix.github.io/macacao-cedropac/" class="dropdown-item links">Cedropac</a></li>
-            <li><a href="https://alefnix.github.io/macacao-flex-rip-stop/" class="dropdown-item links">Flex rip stop</a></li>
-            <li><a href="https://alefnix.github.io/macacao-polycedrobrim-super/" class="dropdown-item links">Polycedrobrim Super</a>
-            <li><a href="https://alefnix.github.io/macacao-polycotton-mais--polycottoncedro-super/" class="dropdown-item links">Polycotton Mais e Pollycottoncedro Super</a></li></li>
-        </ul> 
-    </li>
-    <li><a class="dropdown-item" href="#">Malha &raquo;</a>
-        <ul class="dropdown-menu dropdown-submenu">
-            <li><a href="" class="dropdown-item links">Longo &raquo;</a><ul class="dropdown-menu dropdown-submenu">
-                <li><a href=" https://alefnix.github.io/malha-longa-pv/" class="dropdown-item links">Pv</a></li>
-                <li><a href="https://alefnix.github.io/malha-longa-100-algod-o/" class="dropdown-item links">100% Algodão</a></li>
-            </ul></li>
-            <li><a href="" class="dropdown-item links">Curto &raquo;</a>
-                <ul class="dropdown-menu dropdown-submenu">
-                    <li><a href="https://alefnix.github.io/malha-curta-pv/" class="dropdown-item links">Pv</a></li>
-                    <li><a href="https://alefnix.github.io/malha-curta-100-algod-o/" class="dropdown-item links">100% Algodão</a></li>
-                </ul> </li>
-        </ul> 
-    </li>
-    </ul>
-  </div>
-  
-</div><div id="dvDisplay">
-</div>
-  <style>
-.pagina{
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+.dropdown-submenu {
+  position: relative;
 }
 
-.dropdown-menu li {
-position: relative;
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
 }
-.dropdown-menu .dropdown-submenu {
-display: none;
-position: absolute;
-left: 100%;
-top: -7px;
+</style>
+</head>
+<body>
+<div class="pagina">                               
+  <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Modelos
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a tabindex="-1" href="https://alefnix.github.io/simulador-bon-/">Boné</a></li>
+      <li><a tabindex="-1" href="https://alefnix.github.io/moletomoficial/">Moletom</a></li>
+      <li class="dropdown-submenu">
+        <a class="test" tabindex="-1">New dropdown <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+          <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+          <li class="dropdown-submenu">
+            <a class="test" href="#">Another dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">3rd level dropdown</a></li>
+              <li><a href="#">3rd level dropdown</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu"><!--Jalecos-->
+        <a href="" tabindex="-1" class="test">Jalecos<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-Unisafe-slim-FR/" class="links">Unisafe Slim FR</a></li>
+        <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-Pollycotton-mais-Pollycottoncedro-super/" class="links">Pollycotton mais e<br> Pollycottoncedro super</a></li>
+        <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-Pollycotton-leve/" class="links">Pollycotton leve</a></li>
+        <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-Mercurio-FR/" class="links">Mercúrio FR</a></li>
+        <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-Jupiter-FR/" class="links">Júpiter FR</a></li>
+        <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-Flex-rip-stop/" class="links">Flex Rip Stop</a></li>
+        <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-Cedrotech-FR/" class="links">Cedrotech FR</a></li>
+        <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-cedro-rip-stop-super/" class="links">Cedro Rip Stop Super</a></li>
+        <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-Cedro-rip-stop/" class="links">Cedro rip Stop</a></li>
+        <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-cedropac--pacleve/" class="links">Cedropac e CedroPac Leve</a></li>
+        <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-cedrocomfort-ripstop/" class="links">Cedrocomfort RipStop</a></li>
+        <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-Cedrobrim--super-Cedroleve-super/" class="links">Cedrobrom Super e<br>  Cedroleve Super</a></li>
+        <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-Cedrobrim-drill-Cedroleve-drill/" class="links">Cedrobrim Drill e<br>  Cedrolve Drill</a></li>
+        <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-Venus-FR/" class="links">Vênus FR</a></li>
+        <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-Unipar-FR/" class="links">Unipar FR</a></li>
+        <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-Polycedrobrim-super/" class="links">Pollycedrobrim Super</a></li>
+      </ul>
+      </li>
+      <li class="dropdown-submenu"><!--Social-->
+      <a class="test" tabindex="-1">Social<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li class="dropdown-submenu">
+          <a class="test" href="#">Longo<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://alefnix.github.io/social-longo-confort-plus/" class="links">Confort Plus</a></li>
+            <li><a href="https://alefnix.github.io/sociallongo--Bristol-MicroVichy-Medium-london-Spagueti-fusili-londonconfort-barcelona-saville/" tabindex="-1" class="links">Bristol, MicroVichy,<br>Medium, London,<br>Spagueti, Fusili,<br>Londonconfort, Barcelona,<br> Saville</a></a></li>
+            <li><a href="https://alefnix.github.io/social-longo-cottom-premium/" tabindex="-1" class="links">Cottom Premium</a></li>
+            <li><a href="https://alefnix.github.io/Social-longo-classic/" tabindex="-1" class="links">Classic</a></li>
+            <li><a href="https://alefnix.github.io/social-longo-dopfil/" tabindex="-1" class="links">Dopfil</a></li>
+            <li><a href="https://alefnix.github.io/social-longo-fustao/" tabindex="-1" class="links">Fustao</a></li>
+            <li><a href="https://alefnix.github.io/social-longo-natural-fit/" tabindex="-1" class="links">Natural Fit</a></li>
+            <li><a href="https://alefnix.github.io/social-longo-natural-fit-mescla/" tabindex="-1" class="links">Natural Fit Mescla</a></li>
+            <li><a href="https://alefnix.github.io/social-longo-panama/" tabindex="-1" class="links">Panama</a></li>
+            <li><a href="https://alefnix.github.io/social-longo-tricoline-amelie/" tabindex="-1" class="links">Tricoline Amelie</a></li>
+            <li><a href="https://alefnix.github.io/social-longo-tricoline-cannes/" tabindex="-1" class="links">Tricoline Cannes</a></li>
+            <li><a href="https://alefnix.github.io/social-longo-tricoline-ibiza/" tabindex="-1" class="links">Tricoline Ibiza</a></li>
+            <li><a href="https://alefnix.github.io/social-longo-tricoline-soft-mescla/" tabindex="-1" class="links">Tricoline Soft Mescla</a></li>
+            <li><a href="https://alefnix.github.io/social-longo-profit-mix/" tabindex="-1" class="links">Profit Mix</a></li>
+            <li><a href="https://alefnix.github.io/social-longo-profit-strong/" tabindex="-1" class="links">Profit Strong</a></li>
+            <li><a href="https://alefnix.github.io/Simulador-Profit/" tabindex="-1" class="links">Profit</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-submenu">
+          <a class="test" href="#">Curto<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://alefnix.github.io/social-curto-confort-plus/" class="links">Confort Plus</a></li>
+            <li><a href="https://alefnix.github.io/socialcurto--Bristol-MicroVichy-Medium-london-Spagueti-fusili-londonconfort-barcelona-saville/" tabindex="-1" class="links">Bristol, MicroVichy,<br>Medium, London,<br>Spagueti, Fusili,<br>Londonconfort, Barcelona,<br> Saville</a></a></li>
+            <li><a href="https://alefnix.github.io/social-curto-cottom-premium/" tabindex="-1" class="links">Cottom Premium</a></li>
+            <li><a href="https://alefnix.github.io/social-curto-classic/" tabindex="-1" class="links">Classic</a></li>
+            <li><a href="https://alefnix.github.io/social-curto-dopfil/" tabindex="-1" class="links">Dopfil</a></li>
+            <li><a href="https://alefnix.github.io/social-curto-fustao/" tabindex="-1" class="links">Fustao</a></li>
+            <li><a href="https://alefnix.github.io/social-curto-natural-fit/" tabindex="-1" class="links">Natural Fit</a></li>
+            <li><a href="https://alefnix.github.io/social-curto-natural-fit-mescla/" tabindex="-1" class="links">Natural Fit Mescla</a></li>
+            <li><a href="https://alefnix.github.io/social-curto-panama/" tabindex="-1" class="links">Panama</a></li>
+            <li><a href="https://alefnix.github.io/social-curto-tricoline-amelie/" tabindex="-1" class="links">Tricoline Amelie</a></li>
+            <li><a href="https://alefnix.github.io/social-curto-tricoline-cannes/" tabindex="-1" class="links">Tricoline Cannes</a></li>
+            <li><a href="https://alefnix.github.io/social-curto-tricoline-ibiza/" tabindex="-1" class="links">Tricoline Ibiza</a></li>
+            <li><a href="https://alefnix.github.io/social-curto-tricoline-soft-mescla/" tabindex="-1" class="links">Tricoline Soft Mescla</a></li>
+            <li><a href="https://alefnix.github.io/social-curto-profit-mix/" tabindex="-1" class="links">Profit Mix</a></li>
+            <li><a href="https://alefnix.github.io/social-curto-profit-strong/" tabindex="-1" class="links">Profit Strong</a></li>
+            <li><a href="https://alefnix.github.io/simulador-profit-curto/" tabindex="-1" class="links">Profit</a></li>
+          </ul>
+        </li>
+      </ul>
+      </li>
+      <li class="dropdown-submenu">
+        <a class="test" tabindex="-1">Polo<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="https://alefnix.github.io/polo-pv/" tabindex="-1" class="links">PV</a></li>
+          <li><a href="https://alefnix.github.io/polo-piquet/" tabindex="-1" class="links">Piquet</a></li>
+          <li><a href="https://alefnix.github.io/polo-100-algod-o/" tabindex="-1" class="links">100% Algodão</a></li> 
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+</div><div id="dvDisplay">
+</div>
+
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    box-sizing: border-box;
 }
-.dropdown-menu .dropdown-submenu-left {
-right: 100%;
-left: auto;
-}
-.dropdown-menu > li:hover > .dropdown-submenu {
-display: block;
+.pagina{
+  margin: 10px;
 }
 #dvDisplay{
     display: flex;
@@ -255,6 +140,7 @@ display: block;
   margin-top: 20px;
   border-style: none;
 }
+
 iframe{
     width: 100%;
     height: 100vh;
@@ -266,11 +152,17 @@ iframe{
     }
     
 }
+
   </style>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js" ></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script type="text/javascript">
-    $(function () {
+<script>
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+$(function () {
         $('.links').on("click", function () {
             var url = $(this).attr('href');
             $('[id*=dvDisplay]').html('<iframe frameborder="1" src="' + url + '" />');
@@ -278,5 +170,6 @@ iframe{
         });
     });
 </script>
+
 </body>
 </html>
