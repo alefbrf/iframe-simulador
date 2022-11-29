@@ -1,48 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<style>
-.dropdown-submenu {
-  position: relative;
-}
-
-.dropdown-submenu .dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -1px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Modelos</title>
 </head>
 <body>
-<div class="pagina">                               
+<!--  <div class="dropdown">
+    <select name="modelos" id="models" class="btn btn-default dropdown-toggle">
+      <option value="" selected disabled>Modelos</option>
+      <option value="https://alefnix.github.io/simulador-bon-/">Boné</option>
+      <option value="https://alefnix.github.io/moletomoficial/">Moletom</option>
+      <option value="Jalecos">Jalecos</option>
+      <option value="">Social</option>
+      <option value="">Polo</option>
+      <option value="">Calça</option>
+      <option value="">Guarda-Pó</option>
+      <option value="">Jaqueta 01</option>
+      <option value="">Jaqueta 02</option>
+      <option value="">Jaqueta 03</option>
+      <option value="">Macacão NR-10</option>
+      <option value="">Malha</option>
+    </select>
+  </div>-->
   <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Modelos
+    <button class="btn btn-default dropdown-toggle nomemodelos" type="button" data-toggle="dropdown">Modelos
     <span class="caret"></span></button>
     <ul class="dropdown-menu">
-      <li><a tabindex="-1" href="https://alefnix.github.io/simulador-bon-/" class="links">Boné</a></li>
-      <li><a tabindex="-1" href="https://alefnix.github.io/moletomoficial/" class="links">Moletom</a></li>
-      <!--<li class="dropdown-submenu">
-        <a class="test" tabindex="-1">New dropdown <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
-          <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
-          <li class="dropdown-submenu">
-            <a class="test" href="#">Another dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">3rd level dropdown</a></li>
-              <li><a href="#">3rd level dropdown</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>-->
-      <li class="dropdown-submenu"><!--Jalecos-->
-        <a href="" tabindex="-1" class="test">Jalecos<span class="caret"></span></a>
-      <ul class="dropdown-menu">
-        <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-Unisafe-slim-FR/" class="links">Unisafe Slim FR</a></li>
+      <li><a tabindex="-1" href="https://alefnix.github.io/simulador-bon-/" class="links" onclick="mostrabone()">Boné</a></li>
+      <li><a tabindex="-1" href="https://alefnix.github.io/moletomoficial/" class="links" onclick="mostramoletom()">Moletom</a></li>
+      <li><a tabindex="-1" onclick="mostrajaleco()">Jalecos</a></li>
+      <li><a tabindex="-1" onclick="mostratmsocial()" >Social</a></li>
+      <li><a tabindex="-1" onclick="mostrapolo()">Polo</a></li>
+      <li><a tabindex="-1" onclick="mostracalca()">Calça</a></li>
+      <li><a tabindex="-1" onclick="mostraguardapo()">Guarda-Pó</a></li>
+      <li><a tabindex="-1" onclick="mostraj1()">Jaqueta 01</a></li>
+      <li><a tabindex="-1" onclick="mostraj2()">Jaqueta 02</a></li>
+      <li><a tabindex="-1" onclick="mostraj3()">Jaqueta 03</a></li>
+      <li><a tabindex="-1" onclick="mostramacacao()">Macacão NR-10</a></li>
+      <li><a tabindex="-1" onclick="mostramalha()">Malha</a></li>
+    </ul>
+  </div>
+  <div class="dropdown jaleco" style="display:none"><!--tecido jaleco-->
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Escolha o tecido
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-Unisafe-slim-FR/" class="links">Unisafe Slim FR</a></li>
         <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-Pollycotton-mais-Pollycottoncedro-super/" class="links">Pollycotton mais e<br> Pollycottoncedro super</a></li>
         <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-Pollycotton-leve/" class="links">Pollycotton leve</a></li>
         <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-Mercurio-FR/" class="links">Mercúrio FR</a></li>
@@ -58,169 +65,162 @@
         <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-Venus-FR/" class="links">Vênus FR</a></li>
         <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-Unipar-FR/" class="links">Unipar FR</a></li>
         <li><a tabindex="-1" href="https://alefnix.github.io/jaleco-Polycedrobrim-super/" class="links">Pollycedrobrim Super</a></li>
-      </ul>
-      </li>
-      <li class="dropdown-submenu"><!--Social-->
-      <a class="test" tabindex="-1">Social<span class="caret"></span></a>
-      <ul class="dropdown-menu">
-        <li class="dropdown-submenu">
-          <a class="test" href="#">Longo<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="https://alefnix.github.io/social-longo-confort-plus/" class="links">Confort Plus</a></li>
-            <li><a href="https://alefnix.github.io/sociallongo--Bristol-MicroVichy-Medium-london-Spagueti-fusili-londonconfort-barcelona-saville/" tabindex="-1" class="links">Bristol, MicroVichy,<br>Medium, London,<br>Spagueti, Fusili,<br>Londonconfort, Barcelona,<br> Saville</a></a></li>
-            <li><a href="https://alefnix.github.io/social-longo-cottom-premium/" tabindex="-1" class="links">Cottom Premium</a></li>
-            <li><a href="https://alefnix.github.io/Social-longo-classic/" tabindex="-1" class="links">Classic</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-dopfil/" tabindex="-1" class="links">Dopfil</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-fustao/" tabindex="-1" class="links">Fustao</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-natural-fit/" tabindex="-1" class="links">Natural Fit</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-natural-fit-mescla/" tabindex="-1" class="links">Natural Fit Mescla</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-panama/" tabindex="-1" class="links">Panama</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-tricoline-amelie/" tabindex="-1" class="links">Tricoline Amelie</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-tricoline-cannes/" tabindex="-1" class="links">Tricoline Cannes</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-tricoline-ibiza/" tabindex="-1" class="links">Tricoline Ibiza</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-tricoline-soft-mescla/" tabindex="-1" class="links">Tricoline Soft Mescla</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-profit-mix/" tabindex="-1" class="links">Profit Mix</a></li>
-            <li><a href="https://alefnix.github.io/social-longo-profit-strong/" tabindex="-1" class="links">Profit Strong</a></li>
-            <li><a href="https://alefnix.github.io/Simulador-Profit/" tabindex="-1" class="links">Profit</a></li>
-          </ul>
-        </li>
-        <li class="dropdown-submenu">
-          <a class="test" href="#">Curto<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="https://alefnix.github.io/social-curto-confort-plus/" class="links">Confort Plus</a></li>
-            <li><a href="https://alefnix.github.io/socialcurto--Bristol-MicroVichy-Medium-london-Spagueti-fusili-londonconfort-barcelona-saville/" tabindex="-1" class="links">Bristol, MicroVichy,<br>Medium, London,<br>Spagueti, Fusili,<br>Londonconfort, Barcelona,<br> Saville</a></a></li>
-            <li><a href="https://alefnix.github.io/social-curto-cottom-premium/" tabindex="-1" class="links">Cottom Premium</a></li>
-            <li><a href="https://alefnix.github.io/social-curto-classic/" tabindex="-1" class="links">Classic</a></li>
-            <li><a href="https://alefnix.github.io/social-curto-dopfil/" tabindex="-1" class="links">Dopfil</a></li>
-            <li><a href="https://alefnix.github.io/social-curto-fustao/" tabindex="-1" class="links">Fustao</a></li>
-            <li><a href="https://alefnix.github.io/social-curto-natural-fit/" tabindex="-1" class="links">Natural Fit</a></li>
-            <li><a href="https://alefnix.github.io/social-curto-natural-fit-mescla/" tabindex="-1" class="links">Natural Fit Mescla</a></li>
-            <li><a href="https://alefnix.github.io/social-curto-panama/" tabindex="-1" class="links">Panama</a></li>
-            <li><a href="https://alefnix.github.io/social-curto-tricoline-amelie/" tabindex="-1" class="links">Tricoline Amelie</a></li>
-            <li><a href="https://alefnix.github.io/social-curto-tricoline-cannes/" tabindex="-1" class="links">Tricoline Cannes</a></li>
-            <li><a href="https://alefnix.github.io/social-curto-tricoline-ibiza/" tabindex="-1" class="links">Tricoline Ibiza</a></li>
-            <li><a href="https://alefnix.github.io/social-curto-tricoline-soft-mescla/" tabindex="-1" class="links">Tricoline Soft Mescla</a></li>
-            <li><a href="https://alefnix.github.io/social-curto-profit-mix/" tabindex="-1" class="links">Profit Mix</a></li>
-            <li><a href="https://alefnix.github.io/social-curto-profit-strong/" tabindex="-1" class="links">Profit Strong</a></li>
-            <li><a href="https://alefnix.github.io/simulador-profit-curto/" tabindex="-1" class="links">Profit</a></li>
-          </ul>
-        </li>
-      </ul>
-      </li>
-      <li class="dropdown-submenu"><!--Polo-->
-        <a class="test" tabindex="-1">Polo<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="https://alefnix.github.io/polo-pv/" tabindex="-1" class="links">PV</a></li>
-          <li><a href="https://alefnix.github.io/polo-piquet/" tabindex="-1" class="links">Piquet</a></li>
-          <li><a href="https://alefnix.github.io/polo-100-algod-o/" tabindex="-1" class="links">100% Algodão</a></li> 
-        </ul>
-      </li>
-      <li class="dropdown-submenu"><!--Colete-->
-        <a class="test" tabindex="-1">Colete<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="https://alefnix.github.io/colete-polycotton-mais-polycottoncedro-super/" tabindex="-1" class="links">Pollycotton Mais e Pollycottoncedro Super</a></li>
-            <li><a href="https://alefnix.github.io/colete-polycotton-mais-polycottoncedro-super/" tabindex="-1" class="links">Cedrobrim Super e Cedroleve Super</a></li>
-            <li><a href=" https://alefnix.github.io/colete-cedrobrim-leve-drill/" tabindex="-1" class="links">Cedrobrim Drill e Cedroleve Drill</a></li>
-            <li><a href="https://alefnix.github.io/colete-cedropac-cedropac-leve/" tabindex="-1" class="links">Cedropac e Cedropac Leve</a></li>
-            <li><a href="https://alefnix.github.io/colete-flex-rip-stop/" tabindex="-1" class="links">Flex Rip Stop</a></li>
-            <li><a href="https://alefnix.github.io/colete-cedrocomfort-ripstop/" tabindex="-1" class="links">Cedrocomfort RipStop</a></li>
-            <li><a href="https://alefnix.github.io/colete-cedro-ripstop/" tabindex="-1" class="links">Cedro Ripstop</a></li>
-            <li><a href="https://alefnix.github.io/colete-polycedrobrim-super/" tabindex="-1" class="links">Pollycedrobrim Super</a></li>
-            <li><a href="https://alefnix.github.io/colete-polycotton-leve/" tabindex="-1" class="links">Pollycotton Leve</a></li>
-            <li><a href="https://alefnix.github.io/colete-cedro-rip-stop-super/" tabindex="-1" class="links">Cedro Rip Stop Super</a></li>
-        </ul>
-      </li>
-      <li class="dropdown-submenu"><!--Colça-->
-        <a class="test" tabindex="-1">Calça<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="https://alefnix.github.io/calca-cedropac/" tabindex="-1" class="links">Cedropac</a></li>
-          <li><a href="https://alefnix.github.io/calca-polycottoncedro-super/" tabindex="-1" class="links">Pollycottoncedro Super</a></li>
-          <li><a href="https://alefnix.github.io/calca-cedrotech-fr/" tabindex="-1" class="links">Cedrotech FR</a></li>
-          <li><a href="https://alefnix.github.io/calca-cedro-rip-stop/" tabindex="-1" class="links">Júpiter FR</a></li>
-          <li><a href="https://alefnix.github.io/calca-cedro-rip-stop/" tabindex="-1" class="links">Cedro Ripstop</a></li>
-          <li><a href="https://alefnix.github.io/calca-cedrocomfort-ripstop/" tabindex="-1" class="links">Cedrocomfort Ripstop</a></li>
-          <li><a href="https://alefnix.github.io/calca-Polycotton-mais/" tabindex="-1" class="links">Pollycotton Mais</a></li>
-          <li><a href="https://alefnix.github.io/calca-unisafe-slim/" tabindex="-1" class="links">Unisafe Slim</a></li>
-          <li><a href="https://alefnix.github.io/calca-policedrobrim-super/" tabindex="-1" class="links">Policedrobrim Super</a></li>
-          <li><a href="https://alefnix.github.io/calca-cedrobrim-super/" tabindex="-1" class="links">Cedrobrim Super</a></li>
-          <li><a href="https://alefnix.github.io/calca-cedrobrim-drill/" tabindex="-1" class="links">Cedrobrim Drill</a></li>
-          <li><a href="https://alefnix.github.io/calca-flex-rip-stop/" tabindex="-1" class="links">Flex RipStop</a></li>
-          <li><a href="https://alefnix.github.io/calca-mercurio-fr/" tabindex="-1" class="links">Mercúrio FR</a></li>
-          <li><a href="https://alefnix.github.io/calca-unipar-FR/" tabindex="-1" class="links">Unipar FR</a></li>
-          <li><a href="https://alefnix.github.io/calca-cedro-rip-stop-super/" tabindex="-1" class="links">Cedro RipStop Super</a></li>
-        </ul>
-      </li>
-      <li class="dropdown-submenu"><!--Guarda Pó-->
-        <a class="test" tabindex="-1">Guarda Pó<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="https://alefnix.github.io/guarda-p-cedrohospitalar-cedrofill-cedrovip/" tabindex="-1" class="links">Cedrohospitalar, cedrofill e cedrovip</a></li>
-          <li><a href="https://alefnix.github.io/guardapo-cedropac-leve/" tabindex="-1" class="links">Cedropac leve</a></li>
-          <li><a href="https://alefnix.github.io/guardapo-oxford/" tabindex="-1" class="links">Oxford</a></li>
-          <li><a href="https://alefnix.github.io/guardapo-gabardine/" tabindex="-1" class="links">Gabardine</a></li>
-        </ul>
-      </li>
-      <li class="dropdown-submenu"><!--Jaqueta 01-->
-        <a class="test" tabindex="-1">Jaqueta 01<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="https://alefnix.github.io/jaqueta-01-nylon-240/" tabindex="-1" class="links">Nylon</a></li>
-          <li><a href="https://alefnix.github.io/jaqueta-01-cedropac/" tabindex="-1" class="links">Cedropac</a></li>
-          <li><a href="https://alefnix.github.io/jaqueta-01-tactel/" tabindex="-1" class="links">Tactel</a></li>
-        </ul>
-      </li>
-      <li class="dropdown-submenu"><!--Jaqueta 02-->
-        <a class="test" tabindex="-1">Jaqueta 02<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="https://alefnix.github.io/jaqueta-02-nylon/" tabindex="-1" class="links">Nylon</a></li>
-          <li><a href="https://alefnix.github.io/jaqueta-02-cedropac/" tabindex="-1" class="links">Cedropac</a></li>
-          <li><a href="https://alefnix.github.io/jaqueta-02-tactel/" tabindex="-1" class="links">Tactel</a></li>
-        </ul>
-      </li>
-      <li class="dropdown-submenu"><!--Jaqueta 03-->
-        <a class="test" tabindex="-1">Jaqueta 03<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="https://alefnix.github.io/jaqueta3-nylon/" tabindex="-1" class="links">Nylon</a></li>
-          <li><a href="https://alefnix.github.io/Jaqueta3-cedropac/" tabindex="-1" class="links">Cedropac</a></li>
-          <li><a href="https://alefnix.github.io/jaqueta3-tactel/" tabindex="-1" class="links">Tactel</a></li>
-        </ul>
-      </li>
-      <li class="dropdown-submenu"><!--Macacão-->
-        <a class="test" tabindex="-1">Macacão NR-10<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="https://alefnix.github.io/macacao-cedro-rip-stop-super/" tabindex="-1" class="links">Cedro Ripstop Super</a></li>
-          <li><a href="https://alefnix.github.io/macacao-cedro-ripstop/" tabindex="-1" class="links">Cedro Ripstop</a></li>
-          <li><a href="https://alefnix.github.io/macacao-cedrobrim-drill/" tabindex="-1" class="links">Cedrobrim Drill</a></li>
-          <li><a href="https://alefnix.github.io/macacao-cedrobrim-super/" tabindex="-1" class="links">Cedrobrim Super</a></li>
-          <li><a href="https://alefnix.github.io/macacao-cedrocomfort-ripstop/" tabindex="-1" class="links">Cedrocomfort Ripstop</a></li>
-          <li><a href="https://alefnix.github.io/macacao-cedropac/" tabindex="-1" class="links">Cedropac</a></li>
-          <li><a href="https://alefnix.github.io/macacao-flex-rip-stop/" tabindex="-1" class="links">Flex rip stop</a></li>
-          <li><a href="https://alefnix.github.io/macacao-polycedrobrim-super/" tabindex="-1" class="links">Polycedrobrim Super</a>
-          <li><a href="https://alefnix.github.io/macacao-polycotton-mais--polycottoncedro-super/" tabindex="-1" class="links">Polycotton Mais e Pollycottoncedro Super</a></li></li>
-        </ul>
-      </li>
-      <li class="dropdown-submenu"><!--Malha-->
-        <a class="test" tabindex="-1">Malha<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li class="dropdown-submenu">
-            <a class="test" href="#">Curto<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="https://alefnix.github.io/malha-curta-pv/" tabindex="-1" class="links">Pv</a></li>
-              <li><a href="https://alefnix.github.io/malha-curta-100-algod-o/" tabindex="-1" class="links">100% Algodão</a></li>
-            </ul>
-          </li>
-          <li class="dropdown-submenu">
-            <a class="test" href="#">Longo<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href=" https://alefnix.github.io/malha-longa-pv/" tabindex="-1" class="links">Pv</a></li>
-              <li><a href="https://alefnix.github.io/malha-longa-100-algod-o/" tabindex="-1" class="links">100% Algodão</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
     </ul>
   </div>
+  <div class="dropdown socialtamanho" style="display:none"><!--tamanho do social-->
+    <button class="btn btn-default dropdown-toggle socialtamanhobtn" type="button" data-toggle="dropdown">Escolha o tamanho
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a tabindex="-1" onclick="mostrasociallongo()">Longo</a></li>
+      <li><a tabindex="-1" onclick="mostrasocialcurto()">Curto</a></li>
+    </ul>
+  </div>
+  <div class="dropdown sociallongo" style="display:none"><!--tecido do social longo-->
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Escolha o tecido
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="https://alefnix.github.io/social-longo-confort-plus/" class="links">Confort Plus</a></li>
+      <li><a href="https://alefnix.github.io/sociallongo--Bristol-MicroVichy-Medium-london-Spagueti-fusili-londonconfort-barcelona-saville/" tabindex="-1" class="links">Bristol, MicroVichy,<br>Medium, London,<br>Spagueti, Fusili,<br>Londonconfort, Barcelona,<br> Saville</a></a></li>
+      <li><a href="https://alefnix.github.io/social-longo-cottom-premium/" tabindex="-1" class="links">Cottom Premium</a></li>
+      <li><a href="https://alefnix.github.io/Social-longo-classic/" tabindex="-1" class="links">Classic</a></li>
+      <li><a href="https://alefnix.github.io/social-longo-dopfil/" tabindex="-1" class="links">Dopfil</a></li>
+      <li><a href="https://alefnix.github.io/social-longo-fustao/" tabindex="-1" class="links">Fustao</a></li>
+      <li><a href="https://alefnix.github.io/social-longo-natural-fit/" tabindex="-1" class="links">Natural Fit</a></li>
+      <li><a href="https://alefnix.github.io/social-longo-natural-fit-mescla/" tabindex="-1" class="links">Natural Fit Mescla</a></li>
+      <li><a href="https://alefnix.github.io/social-longo-panama/" tabindex="-1" class="links">Panama</a></li>
+      <li><a href="https://alefnix.github.io/social-longo-tricoline-amelie/" tabindex="-1" class="links">Tricoline Amelie</a></li>
+      <li><a href="https://alefnix.github.io/social-longo-tricoline-cannes/" tabindex="-1" class="links">Tricoline Cannes</a></li>
+      <li><a href="https://alefnix.github.io/social-longo-tricoline-ibiza/" tabindex="-1" class="links">Tricoline Ibiza</a></li>
+      <li><a href="https://alefnix.github.io/social-longo-tricoline-soft-mescla/" tabindex="-1" class="links">Tricoline Soft Mescla</a></li>
+      <li><a href="https://alefnix.github.io/social-longo-profit-mix/" tabindex="-1" class="links">Profit Mix</a></li>
+      <li><a href="https://alefnix.github.io/social-longo-profit-strong/" tabindex="-1" class="links">Profit Strong</a></li>
+      <li><a href="https://alefnix.github.io/Simulador-Profit/" tabindex="-1" class="links">Profit</a></li>
+    </ul>
+  </div>
+  <div class="dropdown socialcurto" style="display:none"><!--tecido do social curto-->
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Escolha o tecido
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="https://alefnix.github.io/social-curto-confort-plus/" class="links">Confort Plus</a></li>
+      <li><a href="https://alefnix.github.io/socialcurto--Bristol-MicroVichy-Medium-london-Spagueti-fusili-londonconfort-barcelona-saville/" tabindex="-1" class="links">Bristol, MicroVichy,<br>Medium, London,<br>Spagueti, Fusili,<br>Londonconfort, Barcelona,<br> Saville</a></a></li>
+      <li><a href="https://alefnix.github.io/social-curto-cottom-premium/" tabindex="-1" class="links">Cottom Premium</a></li>
+      <li><a href="https://alefnix.github.io/social-curto-classic/" tabindex="-1" class="links">Classic</a></li>
+      <li><a href="https://alefnix.github.io/social-curto-dopfil/" tabindex="-1" class="links">Dopfil</a></li>
+      <li><a href="https://alefnix.github.io/social-curto-fustao/" tabindex="-1" class="links">Fustao</a></li>
+      <li><a href="https://alefnix.github.io/social-curto-natural-fit/" tabindex="-1" class="links">Natural Fit</a></li>
+      <li><a href="https://alefnix.github.io/social-curto-natural-fit-mescla/" tabindex="-1" class="links">Natural Fit Mescla</a></li>
+      <li><a href="https://alefnix.github.io/social-curto-panama/" tabindex="-1" class="links">Panama</a></li>
+      <li><a href="https://alefnix.github.io/social-curto-tricoline-amelie/" tabindex="-1" class="links">Tricoline Amelie</a></li>
+      <li><a href="https://alefnix.github.io/social-curto-tricoline-cannes/" tabindex="-1" class="links">Tricoline Cannes</a></li>
+      <li><a href="https://alefnix.github.io/social-curto-tricoline-ibiza/" tabindex="-1" class="links">Tricoline Ibiza</a></li>
+      <li><a href="https://alefnix.github.io/social-curto-tricoline-soft-mescla/" tabindex="-1" class="links">Tricoline Soft Mescla</a></li>
+      <li><a href="https://alefnix.github.io/social-curto-profit-mix/" tabindex="-1" class="links">Profit Mix</a></li>
+      <li><a href="https://alefnix.github.io/social-curto-profit-strong/" tabindex="-1" class="links">Profit Strong</a></li>
+      <li><a href="https://alefnix.github.io/simulador-profit-curto/" tabindex="-1" class="links">Profit</a></li>
+    </ul>
+  </div>
+  <div class="dropdown polo" style="display:none"><!--tecido do polo-->
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Escolha o tecido
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="https://alefnix.github.io/polo-pv/" tabindex="-1" class="links">PV</a></li>
+      <li><a href="https://alefnix.github.io/polo-piquet/" tabindex="-1" class="links">Piquet</a></li>
+      <li><a href="https://alefnix.github.io/polo-100-algod-o/" tabindex="-1" class="links">100% Algodão</a></li> 
+    </ul>
+  </div>
+  <div class="dropdown calca" style="display:none"><!--tecido da calça-->
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Escolha o tecido
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="https://alefnix.github.io/calca-cedropac/" tabindex="-1" class="links">Cedropac</a></li>
+      <li><a href="https://alefnix.github.io/calca-polycottoncedro-super/" tabindex="-1" class="links">Pollycottoncedro Super</a></li>
+      <li><a href="https://alefnix.github.io/calca-cedrotech-fr/" tabindex="-1" class="links">Cedrotech FR</a></li>
+      <li><a href="https://alefnix.github.io/calca-cedro-rip-stop/" tabindex="-1" class="links">Júpiter FR</a></li>
+      <li><a href="https://alefnix.github.io/calca-cedro-rip-stop/" tabindex="-1" class="links">Cedro Ripstop</a></li>
+      <li><a href="https://alefnix.github.io/calca-cedrocomfort-ripstop/" tabindex="-1" class="links">Cedrocomfort Ripstop</a></li>
+      <li><a href="https://alefnix.github.io/calca-Polycotton-mais/" tabindex="-1" class="links">Pollycotton Mais</a></li>
+      <li><a href="https://alefnix.github.io/calca-unisafe-slim/" tabindex="-1" class="links">Unisafe Slim</a></li>
+      <li><a href="https://alefnix.github.io/calca-policedrobrim-super/" tabindex="-1" class="links">Policedrobrim Super</a></li>
+      <li><a href="https://alefnix.github.io/calca-cedrobrim-super/" tabindex="-1" class="links">Cedrobrim Super</a></li>
+      <li><a href="https://alefnix.github.io/calca-cedrobrim-drill/" tabindex="-1" class="links">Cedrobrim Drill</a></li>
+      <li><a href="https://alefnix.github.io/calca-flex-rip-stop/" tabindex="-1" class="links">Flex RipStop</a></li>
+      <li><a href="https://alefnix.github.io/calca-mercurio-fr/" tabindex="-1" class="links">Mercúrio FR</a></li>
+      <li><a href="https://alefnix.github.io/calca-unipar-FR/" tabindex="-1" class="links">Unipar FR</a></li>
+      <li><a href="https://alefnix.github.io/calca-cedro-rip-stop-super/" tabindex="-1" class="links">Cedro RipStop Super</a></li>
+    </ul>
+  </div>
+  <div class="dropdown guardapo" style="display:none"><!--tecido do Guarda Pó-->
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Escolha o tecido
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="https://alefnix.github.io/guarda-p-cedrohospitalar-cedrofill-cedrovip/" tabindex="-1" class="links">Cedrohospitalar, cedrofill e cedrovip</a></li>
+      <li><a href="https://alefnix.github.io/guardapo-cedropac-leve/" tabindex="-1" class="links">Cedropac leve</a></li>
+      <li><a href="https://alefnix.github.io/guardapo-oxford/" tabindex="-1" class="links">Oxford</a></li>
+      <li><a href="https://alefnix.github.io/guardapo-gabardine/" tabindex="-1" class="links">Gabardine</a></li>
+    </ul>
+  </div>
+  <div class="dropdown jaqueta1" style="display:none"><!--tecido da Jaqueta 01-->
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Escolha o tecido
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="https://alefnix.github.io/jaqueta-01-nylon-240/" tabindex="-1" class="links">Nylon</a></li>
+      <li><a href="https://alefnix.github.io/jaqueta-01-cedropac/" tabindex="-1" class="links">Cedropac</a></li>
+      <li><a href="https://alefnix.github.io/jaqueta-01-tactel/" tabindex="-1" class="links">Tactel</a></li>
+    </ul>
+  </div>
+  <div class="dropdown jaqueta2" style="display:none"><!--tecido da Jaqueta 02-->
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Escolha o tecido
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="https://alefnix.github.io/jaqueta-02-nylon/" tabindex="-1" class="links">Nylon</a></li>
+      <li><a href="https://alefnix.github.io/jaqueta-02-cedropac/" tabindex="-1" class="links">Cedropac</a></li>
+      <li><a href="https://alefnix.github.io/jaqueta-02-tactel/" tabindex="-1" class="links">Tactel</a></li>
+    </ul>
+  </div>
+  <div class="dropdown jaqueta3" style="display:none"><!--tecido da Jaqueta 03-->
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Escolha o tecido
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="https://alefnix.github.io/jaqueta3-nylon/" tabindex="-1" class="links">Nylon</a></li>
+      <li><a href="https://alefnix.github.io/Jaqueta3-cedropac/" tabindex="-1" class="links">Cedropac</a></li>
+      <li><a href="https://alefnix.github.io/jaqueta3-tactel/" tabindex="-1" class="links">Tactel</a></li>
+    </ul>
+  </div>
+  <div class="dropdown macacaobtn" style="display:none"><!--tecido do macacao-->
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Escolha o tecido
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="https://alefnix.github.io/macacao-cedro-rip-stop-super/" tabindex="-1" class="links">Cedro Ripstop Super</a></li>
+      <li><a href="https://alefnix.github.io/macacao-cedro-ripstop/" tabindex="-1" class="links">Cedro Ripstop</a></li>
+      <li><a href="https://alefnix.github.io/macacao-cedrobrim-drill/" tabindex="-1" class="links">Cedrobrim Drill</a></li>
+      <li><a href="https://alefnix.github.io/macacao-cedrobrim-super/" tabindex="-1" class="links">Cedrobrim Super</a></li>
+      <li><a href="https://alefnix.github.io/macacao-cedrocomfort-ripstop/" tabindex="-1" class="links">Cedrocomfort Ripstop</a></li>
+      <li><a href="https://alefnix.github.io/macacao-cedropac/" tabindex="-1" class="links">Cedropac</a></li>
+      <li><a href="https://alefnix.github.io/macacao-flex-rip-stop/" tabindex="-1" class="links">Flex rip stop</a></li>
+      <li><a href="https://alefnix.github.io/macacao-polycedrobrim-super/" tabindex="-1" class="links">Polycedrobrim Super</a>
+      <li><a href="https://alefnix.github.io/macacao-polycotton-mais--polycottoncedro-super/" tabindex="-1" class="links">Polycotton Mais e Pollycottoncedro Super</a></li></li>
+    </ul>
+  </div>
+ <!-- <select name="modelos" id="models" class="btn btn-default dropdown-toggle">
+    <option value="" selected disabled>Escolha o tecido</option>
+    <option value="https://alefnix.github.io/malha-curta-pv/">Pv Curto</option>
+  </select>-->
+  <div class="dropdown malhabtn" style="display:none"><!--tecido da malha-->
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Escolha o tecido
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="https://alefnix.github.io/malha-curta-pv/" tabindex="-1" class="links">Pv Curto</a></li>
+      <li><a href="https://alefnix.github.io/malha-curta-100-algod-o/" tabindex="-1" class="links">100% Algodão Curto</a></li>
+      <li><a href=" https://alefnix.github.io/malha-longa-pv/" tabindex="-1" class="links">Pv Longo</a></li>
+      <li><a href="https://alefnix.github.io/malha-longa-100-algod-o/" tabindex="-1" class="links" >100% Algodão Longo</a></li>
+    </ul>
+  </div>
+
+
+  
+  <div id="dvDisplay">
 </div>
-</div><div id="dvDisplay">
-</div>
+</body>
 
 <style>
   *{
@@ -233,6 +233,12 @@
 .pagina{
   margin: 10px;
 }
+.dropdown{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+}
 #dvDisplay{
     display: flex;
   justify-content: center;
@@ -242,7 +248,8 @@
   border-style: none;
 }
 .dropdown-menu{
-  min-width: 90px;
+    min-width: 90px;
+    left: auto !important;;
 }
 
 iframe{
@@ -259,6 +266,7 @@ iframe{
 
   </style>
 <script>
+  let nomemodelos = document.querySelector(".nomemodelos").innerText;
 $(document).ready(function(){
   $('.dropdown-submenu a.test').on("click", function(e){
     $(this).next('ul').toggle();
@@ -266,6 +274,7 @@ $(document).ready(function(){
     e.preventDefault();
   });
 });
+
 $(function () {
         $('.links').on("click", function () {
             var url = $(this).attr('href');
@@ -273,7 +282,233 @@ $(function () {
             return false;
         });
     });
+    
+
+
+    $(document).ready(function(){
+
+$('#models').on('click', function () {
+     var url = $(this).val(); 
+     if(url == null){
+      return false
+     }else{
+     $('[id*=dvDisplay]').html('<iframe frameborder="1" src="' + url + '" />');
+    }
+
+    });
+ });
+
+ function mostrajaleco(){
+  document.querySelector(".nomemodelos").innerHTML = `Jalecos <span class="caret"></span>`;
+  console.log(document.querySelector(".nomemodelos").innerHTML);
+  document.querySelector(".jaleco").style.display = "flex";
+  document.querySelector(".socialtamanho").style.display = "none";
+  document.querySelector(".polo").style.display = "none";
+  document.querySelector(".calca").style.display = "none";
+  document.querySelector(".guardapo").style.display = "none";
+  document.querySelector(".jaqueta1").style.display = "none";
+  document.querySelector(".jaqueta2").style.display = "none";
+  document.querySelector(".jaqueta3").style.display = "none";
+  document.querySelector(".macacaobtn").style.display = "none";
+  document.querySelector(".malhabtn").style.display = "none";
+  document.querySelector(".sociallongo").style.display = "none";
+  document.querySelector(".socialcurto").style.display = "none";
+ }
+ function mostratmsocial(){
+  document.querySelector(".nomemodelos").innerHTML = `Social <span class="caret"></span>`;
+  document.querySelector(".jaleco").style.display = "none";
+  document.querySelector(".socialtamanho").style.display = "flex";
+  document.querySelector(".polo").style.display = "none";
+  document.querySelector(".calca").style.display = "none";
+  document.querySelector(".guardapo").style.display = "none";
+  document.querySelector(".jaqueta1").style.display = "none";
+  document.querySelector(".jaqueta2").style.display = "none";
+  document.querySelector(".jaqueta3").style.display = "none";
+  document.querySelector(".macacaobtn").style.display = "none";
+  document.querySelector(".malhabtn").style.display = "none";
+  document.querySelector(".sociallongo").style.display = "none";
+  document.querySelector(".socialcurto").style.display = "none";
+ }
+ function mostrasociallongo(){
+  document.querySelector(".socialtamanhobtn").innerHTML = `Longo <span class="caret"></span>`;
+  document.querySelector(".jaleco").style.display = "none";
+  document.querySelector(".socialtamanho").style.display = "flex";
+  document.querySelector(".polo").style.display = "none";
+  document.querySelector(".calca").style.display = "none";
+  document.querySelector(".guardapo").style.display = "none";
+  document.querySelector(".jaqueta1").style.display = "none";
+  document.querySelector(".jaqueta2").style.display = "none";
+  document.querySelector(".jaqueta3").style.display = "none";
+  document.querySelector(".macacaobtn").style.display = "none";
+  document.querySelector(".malhabtn").style.display = "none";
+  document.querySelector(".sociallongo").style.display = "flex";
+  document.querySelector(".socialcurto").style.display = "none";
+ }
+ function mostrasocialcurto(){
+  document.querySelector(".socialtamanhobtn").innerHTML = `Curto <span class="caret"></span>`;
+  document.querySelector(".jaleco").style.display = "none";
+  document.querySelector(".socialtamanho").style.display = "flex";
+  document.querySelector(".polo").style.display = "none";
+  document.querySelector(".calca").style.display = "none";
+  document.querySelector(".guardapo").style.display = "none";
+  document.querySelector(".jaqueta1").style.display = "none";
+  document.querySelector(".jaqueta2").style.display = "none";
+  document.querySelector(".jaqueta3").style.display = "none";
+  document.querySelector(".macacaobtn").style.display = "none";
+  document.querySelector(".malhabtn").style.display = "none";
+  document.querySelector(".sociallongo").style.display = "none";
+  document.querySelector(".socialcurto").style.display = "flex";
+ }
+ function mostrapolo(){
+  document.querySelector(".nomemodelos").innerHTML = `Polo <span class="caret"></span>`;
+  document.querySelector(".jaleco").style.display = "none";
+  document.querySelector(".socialtamanho").style.display = "none";
+  document.querySelector(".polo").style.display = "flex";
+  document.querySelector(".calca").style.display = "none";
+  document.querySelector(".guardapo").style.display = "none";
+  document.querySelector(".jaqueta1").style.display = "none";
+  document.querySelector(".jaqueta2").style.display = "none";
+  document.querySelector(".jaqueta3").style.display = "none";
+  document.querySelector(".macacaobtn").style.display = "none";
+  document.querySelector(".malhabtn").style.display = "none";
+  document.querySelector(".sociallongo").style.display = "none";
+  document.querySelector(".socialcurto").style.display = "none";
+ }
+ function mostracalca(){
+  document.querySelector(".nomemodelos").innerHTML = `Calça <span class="caret"></span>`;
+  document.querySelector(".jaleco").style.display = "none";
+  document.querySelector(".socialtamanho").style.display = "none";
+  document.querySelector(".polo").style.display = "none";
+  document.querySelector(".calca").style.display = "flex";
+  document.querySelector(".guardapo").style.display = "none";
+  document.querySelector(".jaqueta1").style.display = "none";
+  document.querySelector(".jaqueta2").style.display = "none";
+  document.querySelector(".jaqueta3").style.display = "none";
+  document.querySelector(".macacaobtn").style.display = "none";
+  document.querySelector(".malhabtn").style.display = "none";
+  document.querySelector(".sociallongo").style.display = "none";
+  document.querySelector(".socialcurto").style.display = "none";
+ }
+ function mostraguardapo(){
+  document.querySelector(".nomemodelos").innerHTML = `Guarda-Pó <span class="caret"></span>`;
+  document.querySelector(".jaleco").style.display = "none";
+  document.querySelector(".socialtamanho").style.display = "none";
+  document.querySelector(".polo").style.display = "none";
+  document.querySelector(".calca").style.display = "none";
+  document.querySelector(".guardapo").style.display = "flex";
+  document.querySelector(".jaqueta1").style.display = "none";
+  document.querySelector(".jaqueta2").style.display = "none";
+  document.querySelector(".jaqueta3").style.display = "none";
+  document.querySelector(".macacaobtn").style.display = "none";
+  document.querySelector(".malhabtn").style.display = "none";
+  document.querySelector(".sociallongo").style.display = "none";
+  document.querySelector(".socialcurto").style.display = "none";
+ }
+ function mostraj1(){
+  document.querySelector(".nomemodelos").innerHTML = `Jaqueta 01 <span class="caret"></span>`;
+  document.querySelector(".jaleco").style.display = "none";
+  document.querySelector(".socialtamanho").style.display = "none";
+  document.querySelector(".polo").style.display = "none";
+  document.querySelector(".calca").style.display = "none";
+  document.querySelector(".guardapo").style.display = "none";
+  document.querySelector(".jaqueta1").style.display = "flex";
+  document.querySelector(".jaqueta2").style.display = "none";
+  document.querySelector(".jaqueta3").style.display = "none";
+  document.querySelector(".macacaobtn").style.display = "none";
+  document.querySelector(".malhabtn").style.display = "none";
+  document.querySelector(".sociallongo").style.display = "none";
+  document.querySelector(".socialcurto").style.display = "none";
+ }
+ function mostraj2(){
+  document.querySelector(".nomemodelos").innerHTML = `Jaqueta 02 <span class="caret"></span>`;
+  document.querySelector(".jaleco").style.display = "none";
+  document.querySelector(".socialtamanho").style.display = "none";
+  document.querySelector(".polo").style.display = "none";
+  document.querySelector(".calca").style.display = "none";
+  document.querySelector(".guardapo").style.display = "none";
+  document.querySelector(".jaqueta1").style.display = "none";
+  document.querySelector(".jaqueta2").style.display = "flex";
+  document.querySelector(".jaqueta3").style.display = "none";
+  document.querySelector(".macacaobtn").style.display = "none";
+  document.querySelector(".malhabtn").style.display = "none";
+  document.querySelector(".sociallongo").style.display = "none";
+  document.querySelector(".socialcurto").style.display = "none";
+ }
+ function mostraj3(){
+  document.querySelector(".nomemodelos").innerHTML = `Jaqueta 03 <span class="caret"></span>`;
+  document.querySelector(".jaleco").style.display = "none";
+  document.querySelector(".socialtamanho").style.display = "none";
+  document.querySelector(".polo").style.display = "none";
+  document.querySelector(".calca").style.display = "none";
+  document.querySelector(".guardapo").style.display = "none";
+  document.querySelector(".jaqueta1").style.display = "none";
+  document.querySelector(".jaqueta2").style.display = "none";
+  document.querySelector(".jaqueta3").style.display = "flex";
+  document.querySelector(".macacaobtn").style.display = "none";
+  document.querySelector(".malhabtn").style.display = "none";
+  document.querySelector(".sociallongo").style.display = "none";
+  document.querySelector(".socialcurto").style.display = "none";
+ }
+ function mostramacacao(){
+  document.querySelector(".nomemodelos").innerHTML = `Macacão NR-10 <span class="caret"></span>`;
+  document.querySelector(".jaleco").style.display = "none";
+  document.querySelector(".socialtamanho").style.display = "none";
+  document.querySelector(".polo").style.display = "none";
+  document.querySelector(".calca").style.display = "none";
+  document.querySelector(".guardapo").style.display = "none";
+  document.querySelector(".jaqueta1").style.display = "none";
+  document.querySelector(".jaqueta2").style.display = "none";
+  document.querySelector(".jaqueta3").style.display = "none";
+  document.querySelector(".macacaobtn").style.display = "flex";
+  document.querySelector(".malhabtn").style.display = "none";
+  document.querySelector(".sociallongo").style.display = "none";
+  document.querySelector(".socialcurto").style.display = "none";
+ }
+ function mostramalha(){
+  document.querySelector(".nomemodelos").innerHTML = `Malha <span class="caret"></span>`;
+  document.querySelector(".jaleco").style.display = "none";
+  document.querySelector(".socialtamanho").style.display = "none";
+  document.querySelector(".polo").style.display = "none";
+  document.querySelector(".calca").style.display = "none";
+  document.querySelector(".guardapo").style.display = "none";
+  document.querySelector(".jaqueta1").style.display = "none";
+  document.querySelector(".jaqueta2").style.display = "none";
+  document.querySelector(".jaqueta3").style.display = "none";
+  document.querySelector(".macacaobtn").style.display = "none";
+  document.querySelector(".malhabtn").style.display = "flex";
+  document.querySelector(".sociallongo").style.display = "none";
+  document.querySelector(".socialcurto").style.display = "none";
+ }
+ function mostrabone(){
+  document.querySelector(".nomemodelos").innerHTML = `Boné <span class="caret"></span>`;
+  document.querySelector(".jaleco").style.display = "none";
+  document.querySelector(".socialtamanho").style.display = "none";
+  document.querySelector(".polo").style.display = "none";
+  document.querySelector(".calca").style.display = "none";
+  document.querySelector(".guardapo").style.display = "none";
+  document.querySelector(".jaqueta1").style.display = "none";
+  document.querySelector(".jaqueta2").style.display = "none";
+  document.querySelector(".jaqueta3").style.display = "none";
+  document.querySelector(".macacaobtn").style.display = "none";
+  document.querySelector(".malhabtn").style.display = "none";
+  document.querySelector(".sociallongo").style.display = "none";
+  document.querySelector(".socialcurto").style.display = "none";
+ }
+ function mostramoletom(){
+  document.querySelector(".nomemodelos").innerHTML = `Moletom <span class="caret"></span>`;
+  document.querySelector(".jaleco").style.display = "none";
+  document.querySelector(".socialtamanho").style.display = "none";
+  document.querySelector(".polo").style.display = "none";
+  document.querySelector(".calca").style.display = "none";
+  document.querySelector(".guardapo").style.display = "none";
+  document.querySelector(".jaqueta1").style.display = "none";
+  document.querySelector(".jaqueta2").style.display = "none";
+  document.querySelector(".jaqueta3").style.display = "none";
+  document.querySelector(".macacaobtn").style.display = "none";
+  document.querySelector(".malhabtn").style.display = "none";
+  document.querySelector(".sociallongo").style.display = "none";
+  document.querySelector(".socialcurto").style.display = "none";
+ }
 </script>
 
-</body>
 </html>
