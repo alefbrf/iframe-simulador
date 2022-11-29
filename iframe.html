@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -201,10 +201,6 @@
       <li><a href="https://alefnix.github.io/macacao-polycotton-mais--polycottoncedro-super/" tabindex="-1" class="links">Polycotton Mais e Pollycottoncedro Super</a></li></li>
     </ul>
   </div>
- <!-- <select name="modelos" id="models" class="btn btn-default dropdown-toggle">
-    <option value="" selected disabled>Escolha o tecido</option>
-    <option value="https://alefnix.github.io/malha-curta-pv/">Pv Curto</option>
-  </select>-->
   <div class="dropdown malhabtn" style="display:none"><!--tecido da malha-->
     <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Escolha o tecido
     <span class="caret"></span></button>
@@ -219,6 +215,7 @@
 
   
   <div id="dvDisplay">
+          <p>Escolha um modelo para começar</p>
 </div>
 </body>
 
@@ -229,6 +226,9 @@
     border: 0;
     font-size: 100%;
     box-sizing: border-box;
+}
+body{
+  height: 100%;
 }
 .pagina{
   margin: 10px;
@@ -246,12 +246,21 @@
   text-align: center;
   margin-top: 20px;
   border-style: none;
+  height: 568px;
 }
 .dropdown-menu{
     min-width: 90px;
     left: auto !important;;
 }
-
+p {
+    font-family: "VT323", monospace;
+    font-size: 60px;
+    position: relative;
+    text-align:center; 
+    vertical-align: middle;
+    display: table-cell;  
+    color: #a50000;
+  }
 iframe{
     width: 100%;
     height: 100vh;
